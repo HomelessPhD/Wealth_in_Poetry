@@ -27,7 +27,7 @@ The beauty of trithemian seeds is that they hide in plain sight. If you’ve
  Good luck!
 ```
 
-I have created a dummy python script (that can be found in "python_script" folder)
+I have created a dummy python script **process.py** (that can be found in "python_script" folder)
 in order to check all BIP 39 seed words used in the article text. The script simply
 goes over all BIP 39 words of the article trying the group of 12 words: stepping
 them as: [1,2,3,....,11,12 words], [2,3,4,....,12,13 words], [3,4,5....,13,14 words],

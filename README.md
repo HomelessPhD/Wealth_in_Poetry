@@ -5,7 +5,7 @@ This puzzle composed by **Trithemius** and published on medium [[1]](https://med
 
 To understand the ground of this puzzle - better read the article composed by the author (the copy available here on github in form of .mhtml document).
 
-In short: the author stated that he saved [0.03 BTC](https://www.blockchain.com/explorer/addresses/btc/1K4ezpLybootYF23TM4a8Y4NyP7auysnRo) (~900$) on the wallet composed of some specific BIP39 seed words - and the word with the correct order is somehow encoded into the article.
+In short: the author stated that he saved [0.03 BTC](https://www.blockchain.com/explorer/addresses/btc/1K4ezpLybootYF23TM4a8Y4NyP7auysnRo) (**~900$**) on the wallet composed of some specific BIP39 seed words - and the word with the correct order is somehow encoded into the article.
 
 ```
 Backup seed phrases are mnemonic devices used to backup and restore access
@@ -34,9 +34,9 @@ them as: [1,2,3,....,11,12 words], [2,3,4,....,12,13 words], [3,4,5....,13,14 wo
 .... In other words, it linearly takes 12 BIP 39 seed words from the text shifting
 the beginning of the group over the text till it reach the end of the text.
 
-The script works with the pythin module bip32utils, os and bip39 (they should be 
-installed for the script to be used). It uses few files: english.txt - the list of all 
-BIP 39 seed words and text.txt (the text of article) but you could replace with some
+The script works with the python modules **bip32utils**, os and **bip39** (they **should be 
+installed for the script to be used**). It uses few files: **english.txt** - the list of all 
+**BIP 39 seed words** and **text.txt (the text of article)** but you *could replace* with some
 other text.
  
 

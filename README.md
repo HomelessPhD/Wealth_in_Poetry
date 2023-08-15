@@ -5,7 +5,7 @@ This puzzle composed by **Trithemius** and published on medium [[1]](https://med
 
 To understand the ground of this puzzle - better read the article composed by the author (the copy available here on github in form of .mhtml document).
 
-In short: the author stated that he saved [0.03 BTC](https://www.blockchain.com/explorer/addresses/btc/1K4ezpLybootYF23TM4a8Y4NyP7auysnRo) on the wallet composed of some specific BIP39 seed words - and the word with the correct order is somehow encoded into the article.
+In short: the author stated that he saved [0.03 BTC](https://www.blockchain.com/explorer/addresses/btc/1K4ezpLybootYF23TM4a8Y4NyP7auysnRo) (~900$) on the wallet composed of some specific BIP39 seed words - and the word with the correct order is somehow encoded into the article.
 
 ```
 Backup seed phrases are mnemonic devices used to backup and restore access

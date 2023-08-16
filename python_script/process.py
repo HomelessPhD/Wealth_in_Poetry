@@ -36,21 +36,17 @@ for i in range(0,len(seedWords)-12+1):
         key = BIP32Key.fromEntropy(seed)
         account_number = 0
         i = 0
-        print ("Address: " + key.ChildKey(44 + BIP32_HARDEN) \
-         .ChildKey(0 + BIP32_HARDEN) \
-         .ChildKey(account_number + BIP32_HARDEN) \
-         .ChildKey(0) \
-         .ChildKey(i) \
-         .Address() )
         addresses.append(key.ChildKey(44 + BIP32_HARDEN).ChildKey(0 + BIP32_HARDEN).ChildKey(account_number + BIP32_HARDEN).ChildKey(0).ChildKey(i).Address())
         mnemonics.append(mnemonic)
     except Exception as ex:
-        print(f'{i}: error {ex}')
+        with open('invalid_checksum_seeds.log','a') as f:
+            f.write(f'{i}: error {ex}')
         
     # Print out the addresses and mnemonics(seed words) composed form 
     # the seed words ofr the original text
-print('\n'.join(addresses))
-print('\n'.join(mnemonics))
+print( '\n'.join([pair[0]+': '+pair[1] for pair in zip(addresses, mnemonics )]) )
 
 if '1K4ezpLybootYF23TM4a8Y4NyP7auysnRo' in addresses:
     print(f'!!!!!!!!!!!! SOLUTION IS {mnemonics[addresses.index("1K4ezpLybootYF23TM4a8Y4NyP7auysnRo")]}')
+else:
+    print('\nMnemonic for 1K4ezpLybootYF23TM4a8Y4NyP7auysnRo has not been found')

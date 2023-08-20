@@ -27,18 +27,19 @@ The beauty of trithemian seeds is that they hide in plain sight. If you’ve
  Good luck!
 ```
 
-I have created a dummy python script **process.py** (that can be found in "python_script" folder)
-in order to check all BIP 39 seed words used in the article text. The script simply
-goes over all BIP 39 words of the article trying the group of 12 words: stepping
+I have created two dummy python scripts: **try_BIP39.py** and **try_old_Electrum.py** (they can be found in "python_script" folder).
+They both works similar - check all BIP 39 seed words (or all old Electrum seed words) used in the article text.
+The scripts filter the text (text.txt file) leaving only the seed words (preserving their order from the text) and goes over them trying to use the group of 12 words in private key generation: stepping
 them as: [1,2,3,....,11,12 words], [2,3,4,....,12,13 words], [3,4,5....,13,14 words],
-.... In other words, it linearly takes 12 BIP 39 seed words from the text shifting
+.... In other words, it linearly takes 12 seed words from the text shifting
 the beginning of the group over the text till it reach the end of the text.
 
-The script works with the python modules **bip32utils**, os and **bip39** (they **should be 
-installed for the script to be used**). It uses few files: **english.txt** - the list of all 
-**BIP 39 seed words** and **text.txt (the text of article)** but you *could replace* with some
-other text.
- 
+The scripts works with the python modules **bip32utils**, os and **bip39** (they **should be 
+installed for the script to be used**), **codecs**, **hashlib**, **ecdsa**, **base58**. It uses few files: **english.txt** - the list of all **BIP 39 seed words**, **old_mnemonic.py** - old Electrum seed words list and **text.txt (the text of article)** but you *could replace its content* with some other text.
+
+Scripts generate the private key, public key and P2PKH address (compressed\uncompressed) and compare it with the reward address.
+
+ I have run this script without the success, and so i guess the real seed should be found in some else way. BUT, script i wrote could be useful (may be with a slight tuning) - i am open for your ideas.
 
 ## P.S.
 
